@@ -34,9 +34,9 @@ const WaveformViewer = (() => {
         progressColor: '#0ea5e9',
         cursorColor: '#f8fafc',
         height: 150,
-        normalize: true,
-        barWidth: 2,
-        barGap: 1,
+        // Keep absolute amplitude (no normalization) so the main view
+        // matches the minimap impression and avoids visual exaggeration.
+        normalize: false,
         minPxPerSec: BASE_PX_PER_SEC,
         autoScroll: true,
         autoCenter: true
