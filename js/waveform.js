@@ -10,16 +10,18 @@ const WaveformViewer = (() => {
   let _mode = 'wavesurfer';
 
   const containerEl = '#waveform-container';
-  const BASE_PX_PER_SEC = 100;
+  const DEFAULT_BASE_PX_PER_SEC = 1;
   const MIN_ZOOM = 1;
   const MAX_ZOOM = 20;
   let _zoomLevel = 1;
+  let _basePxPerSec = DEFAULT_BASE_PX_PER_SEC;
 
   function init() {
     cleanup();
 
     bindZoomButtons();
     _zoomLevel = 1;
+    _basePxPerSec = DEFAULT_BASE_PX_PER_SEC;
     updateZoomDisplay();
 
     if (!window.WaveSurfer || typeof window.WaveSurfer.create !== 'function') {
@@ -37,9 +39,9 @@ const WaveformViewer = (() => {
         // Keep absolute amplitude (no normalization) so the main view
         // matches the minimap impression and avoids visual exaggeration.
         normalize: false,
-        minPxPerSec: BASE_PX_PER_SEC,
+        minPxPerSec: _basePxPerSec,
         autoScroll: true,
-        autoCenter: true
+        autoCenter: false
       });
 
       try {
@@ -138,6 +140,27 @@ const WaveformViewer = (() => {
     el.textContent = '0.000s / 0.000s';
   }
 
+  function computeFitPxPerSec(durationSec) {
+    const container = document.querySelector(containerEl);
+    const widthPx = container ? container.clientWidth : 0;
+    if (!Number.isFinite(durationSec) || durationSec <= 0 || widthPx <= 0) {
+      return DEFAULT_BASE_PX_PER_SEC;
+    }
+    return Math.max(1, widthPx / durationSec);
+  }
+
+  function resetViewportToStart() {
+    if (_mode !== 'wavesurfer' || !wavesurfer) return;
+
+    wavesurfer.setTime(0);
+    if (typeof wavesurfer.setScroll === 'function') {
+      wavesurfer.setScroll(0);
+    }
+    if (typeof wavesurfer.setScrollTime === 'function') {
+      wavesurfer.setScrollTime(0);
+    }
+  }
+
   function loadAudio(url) {
     if (!wavesurfer && !audioEl) init();
     _zoomLevel = 1;
@@ -168,7 +191,9 @@ const WaveformViewer = (() => {
 
     return new Promise((resolve, reject) => {
       wavesurfer.once('ready', () => {
+        _basePxPerSec = computeFitPxPerSec(wavesurfer.getDuration());
         applyZoom();
+        resetViewportToStart();
         updateTimeDisplay();
         resolve();
       });
@@ -194,7 +219,7 @@ const WaveformViewer = (() => {
 
   function applyZoom() {
     if (_mode === 'wavesurfer' && wavesurfer) {
-      wavesurfer.zoom(_zoomLevel * BASE_PX_PER_SEC);
+      wavesurfer.zoom(_zoomLevel * _basePxPerSec);
     }
     updateZoomDisplay();
   }
@@ -230,7 +255,11 @@ const WaveformViewer = (() => {
       return;
     }
 
-    if (wavesurfer) wavesurfer.stop();
+    if (wavesurfer) {
+      wavesurfer.stop();
+      resetViewportToStart();
+      updateTimeDisplay();
+    }
   }
 
   function setPlaybackRate(rate) {
