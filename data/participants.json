@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "generatedAt": "2026-02-25T08:11:06.484302+00:00",
+  "generatedAt": "2026-02-25T13:10:39.834007+00:00",
   "scoredSlides": [
     1,
     2,
@@ -537,6 +537,18 @@
           ]
         },
         {
+          "id": "3",
+          "sessionDir": "3_20260119_122545",
+          "availableSlides": [
+            1,
+            2,
+            4,
+            6,
+            8,
+            10
+          ]
+        },
+        {
           "id": "4",
           "sessionDir": "4_20260119_150253",
           "availableSlides": [
@@ -837,6 +849,78 @@
           ]
         },
         {
+          "id": "59",
+          "sessionDir": "59_20260216_145600",
+          "availableSlides": [
+            1,
+            2,
+            4,
+            6,
+            8,
+            10
+          ]
+        },
+        {
+          "id": "60",
+          "sessionDir": "60_20260216_153502",
+          "availableSlides": [
+            1,
+            2,
+            4,
+            6,
+            8,
+            10
+          ]
+        },
+        {
+          "id": "61",
+          "sessionDir": "61_20260216_162740",
+          "availableSlides": [
+            1,
+            2,
+            4,
+            6,
+            8,
+            10
+          ]
+        },
+        {
+          "id": "62",
+          "sessionDir": "62_20260216_170506",
+          "availableSlides": [
+            1,
+            2,
+            4,
+            6,
+            8,
+            10
+          ]
+        },
+        {
+          "id": "63",
+          "sessionDir": "63_20260216_174413",
+          "availableSlides": [
+            1,
+            2,
+            4,
+            6,
+            8,
+            10
+          ]
+        },
+        {
+          "id": "64",
+          "sessionDir": "64_20260216_182347",
+          "availableSlides": [
+            1,
+            2,
+            4,
+            6,
+            8,
+            10
+          ]
+        },
+        {
           "id": "65",
           "sessionDir": "65_20260217_110229",
           "availableSlides": [
@@ -863,6 +947,66 @@
         {
           "id": "67",
           "sessionDir": "67_20260217_122434",
+          "availableSlides": [
+            1,
+            2,
+            4,
+            6,
+            8,
+            10
+          ]
+        },
+        {
+          "id": "68",
+          "sessionDir": "68_20260217_145534",
+          "availableSlides": [
+            1,
+            2,
+            4,
+            6,
+            8,
+            10
+          ]
+        },
+        {
+          "id": "69",
+          "sessionDir": "69_20260217_154729",
+          "availableSlides": [
+            1,
+            2,
+            4,
+            6,
+            8,
+            10
+          ]
+        },
+        {
+          "id": "70",
+          "sessionDir": "70_20260217_163522",
+          "availableSlides": [
+            1,
+            2,
+            4,
+            6,
+            8,
+            10
+          ]
+        },
+        {
+          "id": "71",
+          "sessionDir": "71_20260217_171202",
+          "availableSlides": [
+            1,
+            2,
+            4,
+            6,
+            8,
+            10
+          ]
+        },
+        {
+          "id": "73",
+          "sessionDir": "73_20260217_180727",
           "availableSlides": [
             1,
             2,
