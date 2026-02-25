@@ -30,6 +30,7 @@ const DataLoader = (() => {
           sourceDatasetId: ds.id,
           sourceDatasetLabel: ds.label,
           audioRoot: ds.audioRoot,
+          audioExtension: ds.audioExtension || _manifest.audioExtension || 'mp3',
           sessionDir: p.sessionDir,
           availableSlides: p.availableSlides || []
         };
@@ -96,7 +97,8 @@ const DataLoader = (() => {
 
   function getAudioFileName(participant, slide) {
     const slideStr = String(slide).padStart(2, '0');
-    return `${participant.sessionDir}_slide${slideStr}.wav`;
+    const ext = participant.audioExtension || (_manifest && _manifest.audioExtension) || 'mp3';
+    return `${participant.sessionDir}_slide${slideStr}.${ext}`;
   }
 
   function getAudioUrl(participant, slide) {

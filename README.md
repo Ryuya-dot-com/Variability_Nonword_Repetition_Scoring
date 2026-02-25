@@ -23,8 +23,9 @@ This script:
   - `../Analysis/BehavioralData/DelayedData/NonwordRepetition`
 - extracts 53-item scoring template from
   - `../Analysis/BehavioralData/NonwordRepetition.xlsx`
+- converts only scored slides (`1/2/4/6/8/10`) from WAV to MP3
 - writes `data/participants.json`
-- creates symlinks under `data/audio/`
+- writes audio files to `data/audio/immediate/` and `data/audio/delayed/`
 
 ## Run
 From this directory:
