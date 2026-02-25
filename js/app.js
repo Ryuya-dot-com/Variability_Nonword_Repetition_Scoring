@@ -163,7 +163,7 @@ const App = (() => {
     _dataset = DataLoader.getDataset(datasetId);
     _items = DataLoader.getTrialTemplate();
     _participants = participantKeys
-      .map(k => DataLoader.getParticipantByKey(k))
+      .map(k => resolveParticipant(_dataset, k))
       .filter(Boolean);
 
     if (!_dataset || _participants.length === 0) {
@@ -175,7 +175,12 @@ const App = (() => {
     document.getElementById('scoring-screen').style.display = '';
     document.getElementById('dataset-label').textContent = _dataset.label;
 
-    WaveformViewer.init();
+    try {
+      WaveformViewer.init();
+    } catch (e) {
+      console.error('Waveform initialization failed:', e);
+      alert('Waveform initialization failed. The app will continue in basic mode.');
+    }
     ScoringUI.init(() => {
       Navigation.updateProgress();
       showSaveStatus();
@@ -225,6 +230,16 @@ const App = (() => {
     const safeI = Math.min(startIIndex, _items.length - 1);
     _audioKey = null;
     Navigation.navigate(safeP, safeI);
+  }
+
+  function resolveParticipant(dataset, keyOrId) {
+    const direct = DataLoader.getParticipantByKey(String(keyOrId));
+    if (direct) return direct;
+    if (!dataset) return null;
+
+    // Backward compatibility: older saved sessions may store bare participant IDs.
+    const asId = String(keyOrId);
+    return dataset.participants.find(p => p.id === asId) || null;
   }
 
   async function loadItem(_pIndex, _iIndex, participant, item) {

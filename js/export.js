@@ -8,6 +8,10 @@ const Export = (() => {
     return String(value).replace(/[^A-Za-z0-9_-]/g, '_');
   }
 
+  function hasSheetJs() {
+    return typeof window.XLSX !== 'undefined' && window.XLSX && window.XLSX.utils;
+  }
+
   function buildRows(participant, dataset, items, state) {
     return items.map(item => {
       const score = State.getScore(participant.key, item.index) || {};
@@ -39,21 +43,31 @@ const Export = (() => {
     if (!state) return;
 
     const rows = buildRows(participant, dataset, items, state);
-    const wb = XLSX.utils.book_new();
-    const ws = XLSX.utils.json_to_sheet(rows);
-    XLSX.utils.book_append_sheet(wb, ws, 'Scoring');
-
     const ts = new Date().toISOString().replace(/[:.]/g, '-').slice(0, 19);
-    const filename = [
+    const base = [
       'nonword_scoring',
       safeName(state.raterId),
       safeName(dataset.id),
       safeName(participant.id),
       safeName(participant.timing),
       ts
-    ].join('_') + '.xlsx';
+    ].join('_');
 
-    XLSX.writeFile(wb, filename);
+    if (!hasSheetJs()) {
+      const headers = Object.keys(rows[0] || {});
+      const csvRows = [headers.join(',')];
+      rows.forEach(row => {
+        csvRows.push(headers.map(h => escapeCSV(row[h])).join(','));
+      });
+      downloadBlob(csvRows.join('\n'), `${base}.csv`, 'text/csv');
+      State.markParticipantExported(participant.key);
+      return;
+    }
+
+    const wb = XLSX.utils.book_new();
+    const ws = XLSX.utils.json_to_sheet(rows);
+    XLSX.utils.book_append_sheet(wb, ws, 'Scoring');
+    XLSX.writeFile(wb, `${base}.xlsx`);
     State.markParticipantExported(participant.key);
   }
 
@@ -71,7 +85,7 @@ const Export = (() => {
         <h3>Participant ${participant.id} 完了</h3>
         <p>53項目の採点が完了しました。別ファイルとして保存しますか？</p>
         <div class="export-popup-buttons">
-          <button class="btn btn-primary popup-download">Download .xlsx</button>
+          <button class="btn btn-primary popup-download">Download</button>
           <button class="btn popup-skip">Skip</button>
         </div>
       </div>
