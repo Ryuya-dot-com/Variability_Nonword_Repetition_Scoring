@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nonword Repetition Scorer</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="setup-screen" class="screen">
+    <div class="setup-container">
+      <h1>Nonword Repetition Scorer</h1>
+      <p class="subtitle">完全一致 = 1、不一致 = 0（部分点なし）</p>
+
+      <div class="setup-section">
+        <label for="rater-id">Rater ID</label>
+        <input type="text" id="rater-id" placeholder="e.g., rater_A" autocomplete="off">
+      </div>
+
+      <div class="setup-section">
+        <label>Dataset</label>
+        <div id="dataset-selector" class="radio-group"></div>
+      </div>
+
+      <div class="setup-section">
+        <label>Participants <span id="participant-count" class="badge"></span></label>
+        <div class="participant-controls">
+          <button id="select-all-btn" class="btn btn-sm">Select All</button>
+          <button id="deselect-all-btn" class="btn btn-sm">Deselect All</button>
+        </div>
+        <div id="participant-selector" class="checkbox-grid"></div>
+      </div>
+
+      <div class="setup-section setup-note">
+        <div>採点対象 slide: 1 / 2 / 4 / 6 / 8 / 10</div>
+        <div>slide 3 / 5 / 7 / 9 / 11 はスキップ</div>
+      </div>
+
+      <button id="start-btn" class="btn btn-primary btn-lg" disabled>Start Scoring</button>
+
+      <div id="resume-section" class="resume-section" style="display:none">
+        <h3>Previous Session Found</h3>
+        <p id="resume-info"></p>
+        <button id="resume-btn" class="btn btn-primary">Resume</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="scoring-screen" class="screen" style="display:none">
+    <header class="scoring-header">
+      <div class="header-left">
+        <button id="back-to-setup" class="btn btn-sm">Back</button>
+        <span id="dataset-label" class="dataset-badge"></span>
+      </div>
+      <div class="header-center">
+        <button id="prev-item" class="btn btn-nav">Prev</button>
+        <span id="item-indicator">Item 1/53</span>
+        <button id="next-item" class="btn btn-nav">Next</button>
+      </div>
+      <div class="header-right">
+        <button id="prev-participant" class="btn btn-nav btn-sm">Prev P</button>
+        <span id="participant-indicator">Participant 1/52</span>
+        <button id="next-participant" class="btn btn-nav btn-sm">Next P</button>
+      </div>
+    </header>
+
+    <main class="scoring-main">
+      <div class="trial-info">
+        <div class="trial-info-row">
+          <div id="item-word" class="trial-word"></div>
+          <div id="task-badge" class="task-badge"></div>
+        </div>
+        <div id="trial-details" class="trial-details"></div>
+      </div>
+
+      <div class="waveform-section">
+        <div class="playback-controls">
+          <button id="play-btn" class="btn btn-play">Play</button>
+          <button id="stop-btn" class="btn btn-sm">Stop</button>
+          <div class="zoom-control">
+            <button id="zoom-out" class="btn btn-sm">-</button>
+            <span id="zoom-level">1.0x</span>
+            <button id="zoom-in" class="btn btn-sm">+</button>
+            <button id="zoom-reset" class="btn btn-sm">Fit</button>
+          </div>
+          <div class="speed-control">
+            <label for="playback-speed">Speed:</label>
+            <select id="playback-speed">
+              <option value="0.5">0.5x</option>
+              <option value="0.75">0.75x</option>
+              <option value="1" selected>1x</option>
+              <option value="1.25">1.25x</option>
+              <option value="1.5">1.5x</option>
+            </select>
+          </div>
+        </div>
+        <div id="waveform-container" class="waveform-container"></div>
+        <div id="waveform-timeline" class="waveform-timeline"></div>
+        <div id="waveform-minimap" class="waveform-minimap"></div>
+        <div class="waveform-info">
+          <span id="waveform-time">0.000s / 0.000s</span>
+          <span id="audio-file-label">Audio: --</span>
+        </div>
+      </div>
+
+      <div class="accuracy-section">
+        <h3>Accuracy Score</h3>
+        <div class="score-buttons">
+          <button class="btn btn-score" data-score="0" title="Score 0 (key: 0)">0</button>
+          <button class="btn btn-score" data-score="1" title="Score 1 (key: 1)">1</button>
+        </div>
+        <div id="score-hint" class="score-hint">完全一致のみ 1、それ以外は 0</div>
+      </div>
+
+      <div class="notes-section">
+        <label for="item-notes">備考 (N):</label>
+        <textarea id="item-notes" rows="2" placeholder="例: 言い直しあり、語順入れ替え、雑音など"></textarea>
+      </div>
+
+      <div class="progress-section">
+        <div class="progress-bar-container">
+          <div id="progress-bar" class="progress-bar" style="width:0%"></div>
+        </div>
+        <span id="progress-text">0 / 0 scored</span>
+        <button id="jump-unscored" class="btn btn-sm">Jump to Unscored</button>
+      </div>
+    </main>
+
+    <footer class="scoring-footer">
+      <button id="export-participant" class="btn">Export Participant (.xlsx)</button>
+      <button id="export-all-csv" class="btn">Export Selected (CSV)</button>
+      <span id="save-status" class="save-status">Saved</span>
+    </footer>
+  </div>
+
+  <script src="https://unpkg.com/wavesurfer.js@7/dist/wavesurfer.min.js"></script>
+  <script src="https://unpkg.com/wavesurfer.js@7/dist/plugins/minimap.min.js"></script>
+  <script src="https://unpkg.com/wavesurfer.js@7/dist/plugins/timeline.min.js"></script>
+  <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
+
+  <script src="js/data-loader.js"></script>
+  <script src="js/state.js"></script>
+  <script src="js/waveform.js"></script>
+  <script src="js/scoring-ui.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/export.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

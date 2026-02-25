@@ -1,0 +1,1400 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-02-25T07:26:44.112151+00:00",
+  "skipSlides": [
+    3,
+    5,
+    7,
+    9,
+    11
+  ],
+  "scoring": {
+    "accuracyValues": [
+      0,
+      1
+    ],
+    "partialCredit": false,
+    "rule": "Completely correct response = 1, otherwise 0"
+  },
+  "trialTemplate": [
+    {
+      "index": 1,
+      "slide": 1,
+      "trial": 1,
+      "task": "one_word",
+      "item": "にはえ",
+      "itemOrderInTrial": 1,
+      "itemOrderInSlide": 1
+    },
+    {
+      "index": 2,
+      "slide": 2,
+      "trial": 2,
+      "task": "one_word",
+      "item": "かてせ",
+      "itemOrderInTrial": 1,
+      "itemOrderInSlide": 1
+    },
+    {
+      "index": 3,
+      "slide": 2,
+      "trial": 3,
+      "task": "one_word",
+      "item": "もかね",
+      "itemOrderInTrial": 1,
+      "itemOrderInSlide": 2
+    },
+    {
+      "index": 4,
+      "slide": 4,
+      "trial": 4,
+      "task": "one_word",
+      "item": "ほとき",
+      "itemOrderInTrial": 1,
+      "itemOrderInSlide": 1
+    },
+    {
+      "index": 5,
+      "slide": 4,
+      "trial": 5,
+      "task": "one_word",
+      "item": "つれむ",
+      "itemOrderInTrial": 1,
+      "itemOrderInSlide": 2
+    },
+    {
+      "index": 6,
+      "slide": 4,
+      "trial": 6,
+      "task": "one_word",
+      "item": "こねい",
+      "itemOrderInTrial": 1,
+      "itemOrderInSlide": 3
+    },
+    {
+      "index": 7,
+      "slide": 4,
+      "trial": 7,
+      "task": "one_word",
+      "item": "しつら",
+      "itemOrderInTrial": 1,
+      "itemOrderInSlide": 4
+    },
+    {
+      "index": 8,
+      "slide": 4,
+      "trial": 8,
+      "task": "one_word",
+      "item": "すけね",
+      "itemOrderInTrial": 1,
+      "itemOrderInSlide": 5
+    },
+    {
+      "index": 9,
+      "slide": 6,
+      "trial": 9,
+      "task": "two_word",
+      "item": "てあふ",
+      "itemOrderInTrial": 1,
+      "itemOrderInSlide": 1
+    },
+    {
+      "index": 10,
+      "slide": 6,
+      "trial": 9,
+      "task": "two_word",
+      "item": "へてす",
+      "itemOrderInTrial": 2,
+      "itemOrderInSlide": 2
+    },
+    {
+      "index": 11,
+      "slide": 6,
+      "trial": 10,
+      "task": "two_word",
+      "item": "むみほ",
+      "itemOrderInTrial": 1,
+      "itemOrderInSlide": 3
+    },
+    {
+      "index": 12,
+      "slide": 6,
+      "trial": 10,
+      "task": "two_word",
+      "item": "こへに",
+      "itemOrderInTrial": 2,
+      "itemOrderInSlide": 4
+    },
+    {
+      "index": 13,
+      "slide": 6,
+      "trial": 11,
+      "task": "two_word",
+      "item": "ぬたよ",
+      "itemOrderInTrial": 1,
+      "itemOrderInSlide": 5
+    },
+    {
+      "index": 14,
+      "slide": 6,
+      "trial": 11,
+      "task": "two_word",
+      "item": "られの",
+      "itemOrderInTrial": 2,
+      "itemOrderInSlide": 6
+    },
+    {
+      "index": 15,
+      "slide": 6,
+      "trial": 12,
+      "task": "two_word",
+      "item": "そてせ",
+      "itemOrderInTrial": 1,
+      "itemOrderInSlide": 7
+    },
+    {
+      "index": 16,
+      "slide": 6,
+      "trial": 12,
+      "task": "two_word",
+      "item": "ぬほえ",
+      "itemOrderInTrial": 2,
+      "itemOrderInSlide": 8
+    },
+    {
+      "index": 17,
+      "slide": 6,
+      "trial": 13,
+      "task": "two_word",
+      "item": "まそあ",
+      "itemOrderInTrial": 1,
+      "itemOrderInSlide": 9
+    },
+    {
+      "index": 18,
+      "slide": 6,
+      "trial": 13,
+      "task": "two_word",
+      "item": "そあひ",
+      "itemOrderInTrial": 2,
+      "itemOrderInSlide": 10
+    },
+    {
+      "index": 19,
+      "slide": 8,
+      "trial": 14,
+      "task": "three_word",
+      "item": "わえふ",
+      "itemOrderInTrial": 1,
+      "itemOrderInSlide": 1
+    },
+    {
+      "index": 20,
+      "slide": 8,
+      "trial": 14,
+      "task": "three_word",
+      "item": "ろこよ",
+      "itemOrderInTrial": 2,
+      "itemOrderInSlide": 2
+    },
+    {
+      "index": 21,
+      "slide": 8,
+      "trial": 14,
+      "task": "three_word",
+      "item": "もらま",
+      "itemOrderInTrial": 3,
+      "itemOrderInSlide": 3
+    },
+    {
+      "index": 22,
+      "slide": 8,
+      "trial": 15,
+      "task": "three_word",
+      "item": "つふぬ",
+      "itemOrderInTrial": 1,
+      "itemOrderInSlide": 4
+    },
+    {
+      "index": 23,
+      "slide": 8,
+      "trial": 15,
+      "task": "three_word",
+      "item": "ほせね",
+      "itemOrderInTrial": 2,
+      "itemOrderInSlide": 5
+    },
+    {
+      "index": 24,
+      "slide": 8,
+      "trial": 15,
+      "task": "three_word",
+      "item": "られと",
+      "itemOrderInTrial": 3,
+      "itemOrderInSlide": 6
+    },
+    {
+      "index": 25,
+      "slide": 8,
+      "trial": 16,
+      "task": "three_word",
+      "item": "れきみ",
+      "itemOrderInTrial": 1,
+      "itemOrderInSlide": 7
+    },
+    {
+      "index": 26,
+      "slide": 8,
+      "trial": 16,
+      "task": "three_word",
+      "item": "ふよま",
+      "itemOrderInTrial": 2,
+      "itemOrderInSlide": 8
+    },
+    {
+      "index": 27,
+      "slide": 8,
+      "trial": 16,
+      "task": "three_word",
+      "item": "れちう",
+      "itemOrderInTrial": 3,
+      "itemOrderInSlide": 9
+    },
+    {
+      "index": 28,
+      "slide": 8,
+      "trial": 17,
+      "task": "three_word",
+      "item": "れふか",
+      "itemOrderInTrial": 1,
+      "itemOrderInSlide": 10
+    },
+    {
+      "index": 29,
+      "slide": 8,
+      "trial": 17,
+      "task": "three_word",
+      "item": "なてす",
+      "itemOrderInTrial": 2,
+      "itemOrderInSlide": 11
+    },
+    {
+      "index": 30,
+      "slide": 8,
+      "trial": 17,
+      "task": "three_word",
+      "item": "せほけ",
+      "itemOrderInTrial": 3,
+      "itemOrderInSlide": 12
+    },
+    {
+      "index": 31,
+      "slide": 8,
+      "trial": 18,
+      "task": "three_word",
+      "item": "みけへ",
+      "itemOrderInTrial": 1,
+      "itemOrderInSlide": 13
+    },
+    {
+      "index": 32,
+      "slide": 8,
+      "trial": 18,
+      "task": "three_word",
+      "item": "るはい",
+      "itemOrderInTrial": 2,
+      "itemOrderInSlide": 14
+    },
+    {
+      "index": 33,
+      "slide": 8,
+      "trial": 18,
+      "task": "three_word",
+      "item": "てなせ",
+      "itemOrderInTrial": 3,
+      "itemOrderInSlide": 15
+    },
+    {
+      "index": 34,
+      "slide": 10,
+      "trial": 19,
+      "task": "four_word",
+      "item": "てさや",
+      "itemOrderInTrial": 1,
+      "itemOrderInSlide": 1
+    },
+    {
+      "index": 35,
+      "slide": 10,
+      "trial": 19,
+      "task": "four_word",
+      "item": "にみか",
+      "itemOrderInTrial": 2,
+      "itemOrderInSlide": 2
+    },
+    {
+      "index": 36,
+      "slide": 10,
+      "trial": 19,
+      "task": "four_word",
+      "item": "けかゆ",
+      "itemOrderInTrial": 3,
+      "itemOrderInSlide": 3
+    },
+    {
+      "index": 37,
+      "slide": 10,
+      "trial": 19,
+      "task": "four_word",
+      "item": "めてか",
+      "itemOrderInTrial": 4,
+      "itemOrderInSlide": 4
+    },
+    {
+      "index": 38,
+      "slide": 10,
+      "trial": 20,
+      "task": "four_word",
+      "item": "しえめ",
+      "itemOrderInTrial": 1,
+      "itemOrderInSlide": 5
+    },
+    {
+      "index": 39,
+      "slide": 10,
+      "trial": 20,
+      "task": "four_word",
+      "item": "よろつ",
+      "itemOrderInTrial": 2,
+      "itemOrderInSlide": 6
+    },
+    {
+      "index": 40,
+      "slide": 10,
+      "trial": 20,
+      "task": "four_word",
+      "item": "のへえ",
+      "itemOrderInTrial": 3,
+      "itemOrderInSlide": 7
+    },
+    {
+      "index": 41,
+      "slide": 10,
+      "trial": 20,
+      "task": "four_word",
+      "item": "まにむ",
+      "itemOrderInTrial": 4,
+      "itemOrderInSlide": 8
+    },
+    {
+      "index": 42,
+      "slide": 10,
+      "trial": 21,
+      "task": "four_word",
+      "item": "るひに",
+      "itemOrderInTrial": 1,
+      "itemOrderInSlide": 9
+    },
+    {
+      "index": 43,
+      "slide": 10,
+      "trial": 21,
+      "task": "four_word",
+      "item": "らあろ",
+      "itemOrderInTrial": 2,
+      "itemOrderInSlide": 10
+    },
+    {
+      "index": 44,
+      "slide": 10,
+      "trial": 21,
+      "task": "four_word",
+      "item": "はひに",
+      "itemOrderInTrial": 3,
+      "itemOrderInSlide": 11
+    },
+    {
+      "index": 45,
+      "slide": 10,
+      "trial": 21,
+      "task": "four_word",
+      "item": "まへた",
+      "itemOrderInTrial": 4,
+      "itemOrderInSlide": 12
+    },
+    {
+      "index": 46,
+      "slide": 10,
+      "trial": 22,
+      "task": "four_word",
+      "item": "すちと",
+      "itemOrderInTrial": 1,
+      "itemOrderInSlide": 13
+    },
+    {
+      "index": 47,
+      "slide": 10,
+      "trial": 22,
+      "task": "four_word",
+      "item": "せむて",
+      "itemOrderInTrial": 2,
+      "itemOrderInSlide": 14
+    },
+    {
+      "index": 48,
+      "slide": 10,
+      "trial": 22,
+      "task": "four_word",
+      "item": "はきと",
+      "itemOrderInTrial": 3,
+      "itemOrderInSlide": 15
+    },
+    {
+      "index": 49,
+      "slide": 10,
+      "trial": 22,
+      "task": "four_word",
+      "item": "かれめ",
+      "itemOrderInTrial": 4,
+      "itemOrderInSlide": 16
+    },
+    {
+      "index": 50,
+      "slide": 10,
+      "trial": 23,
+      "task": "four_word",
+      "item": "むもめ",
+      "itemOrderInTrial": 1,
+      "itemOrderInSlide": 17
+    },
+    {
+      "index": 51,
+      "slide": 10,
+      "trial": 23,
+      "task": "four_word",
+      "item": "ゆにや",
+      "itemOrderInTrial": 2,
+      "itemOrderInSlide": 18
+    },
+    {
+      "index": 52,
+      "slide": 10,
+      "trial": 23,
+      "task": "four_word",
+      "item": "ぬむの",
+      "itemOrderInTrial": 3,
+      "itemOrderInSlide": 19
+    },
+    {
+      "index": 53,
+      "slide": 10,
+      "trial": 23,
+      "task": "four_word",
+      "item": "にけえ",
+      "itemOrderInTrial": 4,
+      "itemOrderInSlide": 20
+    }
+  ],
+  "datasets": [
+    {
+      "id": "immediate",
+      "label": "Immediate",
+      "timing": "immediate",
+      "audioRoot": "data/audio/immediate",
+      "participants": [
+        {
+          "id": "1",
+          "sessionDir": "1_20260119_110533",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "2",
+          "sessionDir": "2_20260119_114306",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "4",
+          "sessionDir": "4_20260119_150253",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "5",
+          "sessionDir": "5_20260119_154630",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "6",
+          "sessionDir": "6_20260119_162223",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "7",
+          "sessionDir": "7_20260119_170116",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "8",
+          "sessionDir": "8_20260119_174412",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "9",
+          "sessionDir": "9_20260119_182440",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "38",
+          "sessionDir": "38_20260124_104410",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "40",
+          "sessionDir": "40_20260124_122425",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "41",
+          "sessionDir": "41_20260124_145509",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "42",
+          "sessionDir": "42_20260124_154709",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "43",
+          "sessionDir": "43_20260124_162221",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "44",
+          "sessionDir": "44_20260124_170527",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "45",
+          "sessionDir": "45_20260124_174243",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "46",
+          "sessionDir": "46_20260124_182246",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "47",
+          "sessionDir": "47_20260214_105622",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "48",
+          "sessionDir": "48_20260214_114516",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "49",
+          "sessionDir": "49_20260214_122353",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "50",
+          "sessionDir": "50_20260214_144919",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "51",
+          "sessionDir": "51_20260214_152711",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "52",
+          "sessionDir": "52_20260214_163600",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "53",
+          "sessionDir": "53_20260214_171518",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "55",
+          "sessionDir": "55_20260214_181407",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "56",
+          "sessionDir": "56_20260216_111033",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "57",
+          "sessionDir": "57_20260216_115120",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "58",
+          "sessionDir": "58_20260216_122910",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "65",
+          "sessionDir": "65_20260217_110229",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "66",
+          "sessionDir": "66_20260217_114744",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "67",
+          "sessionDir": "67_20260217_122434",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "74",
+          "sessionDir": "74_20260116_162038",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "75",
+          "sessionDir": "75_20260116_165837",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "id": "delayed",
+      "label": "Delayed",
+      "timing": "delayed",
+      "audioRoot": "data/audio/delayed",
+      "participants": [
+        {
+          "id": "10",
+          "sessionDir": "10_20260127_203105",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "12",
+          "sessionDir": "12_20260127_103549",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "13",
+          "sessionDir": "13_20260128_171247",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "14",
+          "sessionDir": "14_20260128_112126",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "15",
+          "sessionDir": "15_20260127_103512",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "16",
+          "sessionDir": "16_20260127_132328",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "17",
+          "sessionDir": "17_20260127_162358",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "19",
+          "sessionDir": "19_20260128_112202",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "20",
+          "sessionDir": "20_20260127_162044",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "21",
+          "sessionDir": "21_20260127_185719",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "22",
+          "sessionDir": "22_20260128_113857",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "25",
+          "sessionDir": "25_20260128_202146",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "26",
+          "sessionDir": "26_20260127_132633",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "28",
+          "sessionDir": "28_20260131_201741",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "30",
+          "sessionDir": "30_20260129_130810",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "32",
+          "sessionDir": "32_20260130_182714",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "33",
+          "sessionDir": "33_20260130_121852",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "34",
+          "sessionDir": "34_20260130_121852",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "35",
+          "sessionDir": "35_20260131_150435",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        },
+        {
+          "id": "36",
+          "sessionDir": "36_20260201_061539",
+          "availableSlides": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        }
+      ]
+    }
+  ]
+}

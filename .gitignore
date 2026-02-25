@@ -1,0 +1,4 @@
+.DS_Store
+
+# Generated local links to source audio (not for git)
+data/audio/
